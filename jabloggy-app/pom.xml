@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jkl.jabloggy</groupId>
+    <artifactId>jabloggy-app</artifactId>
+    <version>${jabloggy.version}</version>
+
+    <parent>
+        <groupId>com.jkl.jabloggy</groupId>
+        <artifactId>jabloggy</artifactId>
+        <version>0.0.1</version>
+        <relativePath>./../pom.xml</relativePath>
+    </parent>
+
+    <properties>
+        <jabloggy.version>0.0.1-SNAPSHOT</jabloggy.version>
+        <java.version>11</java.version>
+        <spring-properties.version>5.3.13</spring-properties.version>
+        <spring-boot-autoconfigure.version>5.3.13</spring-boot-autoconfigure.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-properties.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>${spring-boot-autoconfigure.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>2.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>3.0.3.RELEASE</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+<!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
+<dependency>
+    <groupId>org.mapstruct</groupId>
+    <artifactId>mapstruct</artifactId>
+    <version>1.4.2.Final</version>
+</dependency>
+
+<dependency>
+<groupId>com.jkl.jabloggy</groupId>
+    <artifactId>jabloggy-api</artifactId>
+    <version>${jabloggy.version}</version>
+</dependency>
+
+    </dependencies>
+
+       <build>
+               <outputDirectory>target</outputDirectory>
+               <plugins>
+                   <plugin>
+                       <groupId>org.apache.maven.plugins</groupId>
+                       <artifactId>maven-compiler-plugin</artifactId>
+                       <configuration>
+                           <source>${java.version}</source>
+                           <target>${java.version}</target>
+                       </configuration>
+                   </plugin>
+               </plugins>
+           </build>
+
+</project>
